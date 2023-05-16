@@ -11,6 +11,11 @@
     width: 75%;
 }
 
+.narrow_contanier{
+    margin: auto;
+    width: 65%;
+}
+
 /* GENERAL_STYLE */
 *{
     font-family: 'Open Sans', sans-serif;
@@ -28,6 +33,19 @@
     background-color: rgba(0,97,255,255);
     border: none;
 }
+
+.medium_button{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 7px;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    background-color: rgba(0,97,255,255);
+    border: none;
+}
+
 
  /* /////// HEADER /////// */ 
 
@@ -70,11 +88,11 @@ header{
     vertical-align: top;
 }
 
-.header_banner_left > span :nth-child(1){
+.header_banner_left > span:nth-child(1){
    
 }
 
-.header_banner_left > span :nth-child(2){
+.header_banner_left > span:nth-child(2){
    
 }
     
@@ -101,6 +119,97 @@ header{
 #header_banner h1{
     font-weight: 800;
     font-size: 3em;
+}
+
+/* /////// MAIN /////// */ 
+main{
+    padding-top: 100px;
+}
+
+main .medium_button {
+    width:100% ;
+}
+
+#subscriptions_slot{
+    display: flex;
+    margin-inline: -30px
+}
+
+#subscriptions_slot > div{
+    width:calc(100%/3);
+    margin:30px
+}
+
+.business_options_slot > h2{
+    margin-bottom: 30px;
+}
+
+.billing_type_options{
+    display: inline-block;
+    margin-right: 15px;
+} 
+
+main .subscription_type span{
+    display: block;
+}
+
+.subscription_type_name{
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+.subscription_type span {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.subscription_plan{
+    padding-inline: 15px;
+    padding-top: 25px;
+}
+
+.subscription_plan > *{
+    margin-bottom: 25px;
+}
+
+#team_slot {
+    
+}
+
+#team_slot > div:nth-child(1){
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+.team_slots_sx_dx{
+    display: flex;
+    margin-inline: -30px;
+}
+
+.team_slot_left{
+    width: calc(((100% + 120px) / 3)* 2);
+    margin-inline: 30px;
+    padding: 15px;
+}
+
+.team_slot_left > *{
+    display: block;
+}
+
+.team_slot_left span:nth-child(2){
+    margin-top: 15px;
+}
+
+.team_slot_left span:nth-child(3){
+    margin-top: 50px;
+}
+
+.team_slot_right{
+    width:calc(100% / 3) ;
+    margin-inline: 30px;
+    padding-inline: 15px;
+   
 }
 
 
@@ -133,6 +242,24 @@ header{
 .debug main{
     background-color: blueviolet;
 }
+
+ .debug #subscriptions_slot > div {
+    /* height: 400px; */
+    border: 1px solid black;
+ }
+
+ .debug #team_slot{
+    border: 1px solid black;
+ }
+
+  .debug .team_slot_right{
+    border: 1px solid black;
+  }
+
+  .debug .team_slot_left{
+    border: 1px solid black;
+  }
+
 /*  */
 .debug footer{
     background-color: brown;
