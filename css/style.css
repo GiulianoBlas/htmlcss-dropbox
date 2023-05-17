@@ -8,17 +8,21 @@
 /* GENERAL_STRUCTURE */
 .wide_contanier{
     margin: auto;
-    width: 75%;
+    width: 75vw;
 }
 
 .narrow_contanier{
     margin: auto;
-    width: 65%;
+    width: 65vw;
 }
 
 /* GENERAL_STYLE */
 *{
     font-family: 'Open Sans', sans-serif;
+}
+
+span , p{
+    color:rgb(62, 62, 62);
 }
 
 /* COMUN_ELEMENTS */
@@ -32,6 +36,7 @@
     color: white;
     background-color: rgba(0,97,255,255);
     border: none;
+    text-decoration: none;
 }
 
 .medium_button{
@@ -44,30 +49,29 @@
     color: white;
     background-color: rgba(0,97,255,255);
     border: none;
+    text-decoration: none;
 }
 
 .small_button{
     display: block;
-    padding: 5px 8px  5px 8px;
+    padding: 5px 8px;
     font-size: 15px;
     font-weight: 300;
     color: white;
     background-color: rgba(0,97,255,255);
     border: none;
+    text-decoration: none;
 }
-
-button:hover{
-    cursor:pointer;
-}
-
-
- /* /////// HEADER /////// */ 
+/*//////////////////////////////////////////////*/
+/* /////// HEADER /////// */ 
+/*//////////////////////////////////////////////*/
 
  /* HEADER_STRUCTURE */
 header{
     width: 100%;
 }
 
+/* NAV */
 #navigation_options{
     height: 60px;
     padding:15px ;
@@ -87,6 +91,7 @@ header{
     margin-inline: 20px;
 }
 
+/* HEADER_BANNER */
 #header_banner{
     margin-top: 60px;
 }
@@ -94,7 +99,6 @@ header{
 #header_banner > .wide_contanier{
     position: relative;
     top: 70px;
-    
 }
 
 #header_banner  h1{
@@ -102,22 +106,21 @@ header{
     margin-bottom: 40px;
 }
 
-.header_banner_left{
-    width: 34%;
-    display: inline-block;
-    vertical-align: top;
+#header_banner  .header_banner_sx_dx {
+    display: flex;
+    justify-content: space-between;
 }
 
-.header_banner_left > span:nth-child(1){
-   
+.header_banner_left{
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .header_banner_left > div{
  margin-top: 70px;
 }
    
-
-    
 .header_banner_right{
     width: 65%;
     display: inline-block;
@@ -139,6 +142,7 @@ header a {
      color: rgb(62, 62, 62);
      font-size: 15px;
 }
+
 #header_banner{
     background-color: rgba(180,208,231,255);
 }
@@ -148,12 +152,11 @@ header a {
     font-size: 3em;
 }
 
- span , p{
-    color:rgb(62, 62, 62);
-}
+/*//////////////////////////////////////////////*/
 /* /////// MAIN /////// */ 
+/*//////////////////////////////////////////////*/
 
-/* MAIN_STRUCUTURE */
+/* MAIN_STRUCTURE */
 main{
     padding-top: 100px;
 }
@@ -162,17 +165,20 @@ main .medium_button {
     width:100% ;
 }
 
+/* MAIN_SECTION_1_SLOTS_1_2_3 */
 .business_options_slot {
     margin-top: 80px;
 }
+
 #subscriptions_slot{
     display: flex;
+    flex-wrap: wrap;
     margin-inline: -30px
 }
 
-#subscriptions_slot > div{
-    width:calc(100%/3);
-    margin:30px
+#subscriptions_slot  .subscription_type{
+    width:calc((100% / 3) - 60px);
+    margin:30px;
 }
 
 .business_options_slot > h2{
@@ -207,6 +213,7 @@ main .subscription_type span{
     margin-bottom: 25px;
 }
 
+/* MAIN_SECTION_1_TEAM_SLOT */
 #team_slot > div:nth-child(1){
     text-align: center;
     padding: 5px;
@@ -215,13 +222,12 @@ main .subscription_type span{
 
 .team_slots_sx_dx{
     display: flex;
-    margin-inline: -30px;
 }
 
 .team_slot_left{
-    width: calc(((100% + 120px) / 3)* 2);
-    margin-inline: 30px;
-    padding: 15px;
+   width: calc((100% / 3) * 2 );
+   margin-right: 30px;
+   padding: 15px;
 }
 
 .team_slot_left > *{
@@ -237,12 +243,17 @@ main .subscription_type span{
 }
 
 .team_slot_right{
-    width:calc(100% / 3) ;
-    margin-inline: 30px;
-    padding-inline: 15px;
-   
+    width: calc((100% / 3) - 30px);
+    margin-left:  30px;
+    padding: 15px;
 }
 
+.team_slot_right .medium_button{
+    width: 100%;
+    text-align: center;
+}
+
+/* MAIN_SECTION_2_PARTNER_SLOT */
 .partner_options_slot{
     display: flex;
     margin-top: 100px;
@@ -250,7 +261,7 @@ main .subscription_type span{
 }
 
 .partner_options_slot_left{
-    width: calc(((100% + 120px) / 3)* 2);
+    width: calc((100% / 3) * 2 );
     margin-right: 30px;
 }
 
@@ -260,10 +271,10 @@ main .subscription_type span{
 }
 
 .partner_options_slot_right{
-    width:calc(100% / 3) ;
-    margin-inline: 30px;
-    padding-inline: 15px;
-    margin-top: 50px;
+        width: calc((100% / 3) - 30px);
+        margin-left:  30px;
+        padding-inline: 15px;
+        padding-top: 70px;
 }
 
 .partner_options_slot_right p{
@@ -272,16 +283,215 @@ main .subscription_type span{
 
 .partner_options_slot_right .medium_button{
     background-color: white;
+    width: 60%;
     color: rgba(141,141,141,255);
     font-weight: 500;
     border: 2px solid rgba(141,141,141,255);
     text-align: center;
 }
 
+/* MAIN_SECTION_3_OPERATIONS_OPTIONS_SLOT */
+.operations_options_slot{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.all_operation_type_slot {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -30px;
+    margin-bottom: 50px;
+}
+
+.operation_type_slot{
+    width:calc((100%/3) - 60px);
+    margin:  30px;
+}
+
+.operation_type_slot  img{
+    width: 100%;
+}
+
+.operation_type_feature > p{
+    margin-top: 25px;
+}
+
+/* MAIN_SECTION_4_CLIENTS_INFO_SLOT*/
+.clients_info_slot{
+    margin-bottom: 100px;
+}
+.clients_info_slot h2{
+    margin-bottom: 40px;
+}
+
+/* MAIN_SECTION_5_DROPBOX_PAPER_SLOT*/
+.all_squares_slot{
+    display: flex;
+    width: 100vw;
+}
+
+.all_squares_slot > div{
+    width: calc(100vw/3);
+    height: calc(100vw/3); 
+}
+
+.big_square{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.big_square:nth-child(2){
+    padding: 30px;
+}
+
+.big_square:nth-child(2) img{
+    width: 60%;
+}
+
+.small_square{
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+
+.small_square > div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.small_square img{
+    width: 100%;
+
+}
+
+/* MAIN_SECTION_5_TRAIAL_SLOT*/
+.trail_slot{
+    padding: 100px;
+}
+
+.traial_slot_sx_dx{
+    display: flex;
+}
+
+.traial_slot_left{
+    width: calc((100% / 3) * 2 );
+    margin-right: 30px;
+}
+
+.traial_slot_right{
+    width: calc((100% / 3) - 30px);
+    margin-left:  30px;
+    padding-inline: 15px;
+}
+
+
+
+.question_slot{
+    display: flex;
+}
+
+.question{
+    width: calc((100% / 3) * 2 );
+    margin-right: 30px;
+}
+
+.question_button{
+    width: calc((100% / 3) - 30px);
+    margin-left:  30px;
+    padding-inline: 15px;
+    text-align: right;
+}
+
+/* MAIN_SECTION_6_QUESTION_SLOT */
+.all_questions_slot{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.all_questions_slot h2{
+    padding-bottom:  50px;
+}
+
+.question_slot{
+    padding-top:  25px;
+    padding-bottom:  25px;
+}
+
+
+
 /* MAIN_STYLE */
+main section h2{
+    font-size: 2em;
+}
+
 .main_border_color .subscription_type , #team_slot{
     border: 1px solid rgba(215,215,218,255);
 }
+
+.big_square:nth-child(2){
+    background-color: rgba(245,245,245,255);
+}
+
+.small_square img{
+    filter: invert(100%);
+}
+
+.big_square_left > .small_square:nth-child(1){
+    border: 10px solid  rgba(209,233,205,255);
+    background-color: rgba(162,211,155,255);
+}
+
+.big_square_left > .small_square:nth-child(2){
+  
+    background-color: rgba(97,8,43,255);
+}
+
+.big_square_left > .small_square:nth-child(3){
+    background-color: rgba(0,147,206,255);
+}
+
+.big_square_left > .small_square:nth-child(4){
+    background-color:rgba(255,28,28,255);
+}
+
+.big_square_right > .small_square:nth-child(1){
+    background-color: rgba(213,0,31,255);
+}
+
+.big_square_right > .small_square:nth-child(2){
+    background-color: rgba(180,208,231,255);
+}
+
+.big_square_right > .small_square:nth-child(3){
+    background-color: rgba(13,36,129,255);
+}
+
+.big_square_right > .small_square:nth-child(4){
+    background-color: rgba(255,216,48,255);
+}
+
+.trail_slot {
+    background-color: rgba(180,208,231,255);
+}
+
+.trail_slot h2{
+    color: rgba(97,8,47,255);
+}
+
+.trail_slot .medium_button  {
+ background-color: white;
+ color: rgb(62, 62, 62);
+ text-align: center;
+}
+
+.question_button button{
+    background-color: transparent;
+    border-style: none;
+}
+
+
 
 
 
@@ -319,4 +529,38 @@ main .subscription_type span{
 .debug footer{
     background-color: brown;
 }
+/*  /
+.debug .all_squares_slot > div {
+    border: 1px  solid black;
+}
+
+.small_square{
+    border: 1px  solid black;
+/* } *
+
+.traial_slot_left{
+    border: 1px  solid black;
+    display: inline-block;
+}
+
+.traial_slot_right{
+    border: 1px  solid black;
+    display: inline-block;
+}
+
+.traial_slot_sx_dx{
+    border: 1px  solid black;
+}
+
+/*  /
+.question{
+    border: 1px  solid black;
+}
+
+.question_button{
+    border: 1px  solid black;
+}
 /*  */
+.all_questions_slot .question_slot, .all_questions_slot h2 {
+    border-bottom:  1px  solid black;
+}
