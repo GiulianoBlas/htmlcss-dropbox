@@ -31,6 +31,7 @@ span , p{
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 8px;
+    text-align: center;
     font-size: 16px;
     font-weight: 300;
     color: white;
@@ -44,6 +45,7 @@ span , p{
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 7px;
+    text-align: center;
     font-size: 14px;
     font-weight: 300;
     color: white;
@@ -55,6 +57,7 @@ span , p{
 .small_button{
     display: block;
     padding: 5px 8px;
+    text-align: center;
     font-size: 15px;
     font-weight: 300;
     color: white;
@@ -115,6 +118,10 @@ header{
     width: 35%;
     display: inline-block;
     vertical-align: top;
+}
+
+.header_banner_left .big_button{
+    width: 60%;
 }
 
 .header_banner_left > div{
@@ -204,10 +211,33 @@ main .subscription_type span{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 .subscription_plan{
     padding-inline: 15px;
     padding-top: 25px;
 }
+
+.info_plan span:nth-child(2){
+    color: black;
+    font-weight: 600;
+}
+
+.info_plan span:nth-child(3){
+    color: rgb(174, 170, 170);
+}
+
+.subscription_plan_features > div span:nth-child(1){
+    display: inline-block;
+    width: 5%;
+   margin-right: 7px;
+}
+
+.subscription_plan_features > div span:nth-child(2){
+    display: inline-block;
+    width:calc(93% - 7px) ;
+    vertical-align: top;
+}
+
 
 .subscription_plan > *{
     margin-bottom: 25px;
@@ -320,6 +350,7 @@ main .subscription_type span{
 .clients_info_slot{
     margin-bottom: 100px;
 }
+
 .clients_info_slot h2{
     margin-bottom: 40px;
 }
@@ -386,8 +417,6 @@ main .subscription_type span{
     padding-inline: 15px;
 }
 
-
-
 /* MAIN_SECTION_6_QUESTION_SLOT */
 .all_questions_slot{
     margin-top: 100px;
@@ -418,8 +447,6 @@ main .subscription_type span{
     padding-inline: 15px;
     text-align: right;
 }
-
-
 
 /* MAIN_STYLE */
 main section h2{
@@ -491,6 +518,9 @@ main section h2{
     border-style: none;
 }
 
+.question_slot, .all_questions_slot h2 {
+    border-bottom:  1px solid rgba(215,215,218,255);
+}
 /*//////////////////////////////////////////////*/
 /* /////// FOOTER /////// */ 
 /*//////////////////////////////////////////////*/
@@ -500,6 +530,7 @@ footer{
     padding-top: 100px;
     padding-bottom: 25px;
 }
+
  .footer_nav .wide_contanier{
     display: flex;
     flex-wrap: wrap;
@@ -510,7 +541,6 @@ footer{
     margin-inline: 30px;
 }
 
-
 .footer_nav_list{
     margin-bottom: 50px;
 }
@@ -519,6 +549,7 @@ footer{
     padding-bottom: 40px;
     padding-top: 40px ;
 }
+
 .footer_nav_list > a{
     display: block;
     margin-top: 10px;
@@ -547,71 +578,3 @@ footer {
 }
 
 
-/* DEBUG /
-.debug header{
-    background-color: blue;
-}
-
-#navigation_options > *{
-    border: 1px solid orange;
-}
-
-#header_banner  h1{
-    border: 1px solid black;
-}
-
-.header_banner_left{
-    border: 1px solid black;
-}
-
-.header_banner_right{
-    border: 1px solid black;
-}
-
-/*  /
-.debug main{
-    background-color: blueviolet;
-}
-
- .debug .partner_options_slot div{
-    border: 1px  solid black;
- }
-/*  /
-.debug footer{
-    background-color: brown;
-}
-/*  /
-.debug .all_squares_slot > div {
-    border: 1px  solid black;
-}
-
-.small_square{
-    border: 1px  solid black;
-/* } *
-
-.traial_slot_left{
-    border: 1px  solid black;
-    display: inline-block;
-}
-
-.traial_slot_right{
-    border: 1px  solid black;
-    display: inline-block;
-}
-
-.traial_slot_sx_dx{
-    border: 1px  solid black;
-}
-
-/*  /
-.question{
-    border: 1px  solid black;
-}
-
-.question_button{
-    border: 1px  solid black;
-}
-/*  */
-.all_questions_slot .question_slot, .all_questions_slot h2 {
-    border-bottom:  1px  solid black;
-}
